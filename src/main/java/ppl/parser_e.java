@@ -1,10 +1,10 @@
-package Ppl;
+package ppl;
 
-import Ppl.LetLangExp.ConstExp;
-import Ppl.LetLangExp.DiffExp;
-import Ppl.LetLangExp.LetExp;
-import Ppl.LetLangExp.VarExp;
-import Ppl.LetScanner.Token;
+import ppl.LetLangExp.ConstExp;
+import ppl.LetLangExp.DiffExp;
+import ppl.LetLangExp.LetExp;
+import ppl.LetLangExp.VarExp;
+import ppl.LetScanner.Token;
 
 import java.util.ArrayList;
 

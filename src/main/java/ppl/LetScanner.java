@@ -1,4 +1,4 @@
-package Ppl;
+package ppl;
 
 import java.io.IOException;
 import java.util.ArrayList;

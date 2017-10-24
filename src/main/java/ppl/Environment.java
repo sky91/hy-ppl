@@ -1,4 +1,4 @@
-package Ppl;
+package ppl;
 
 public class Environment {
 	public static SampleEnv env;

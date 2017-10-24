@@ -1,6 +1,6 @@
-package Ppl;
+package ppl;
 
-import Ppl.LetScanner.Token;
+import ppl.LetScanner.Token;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package Ppl;
+package ppl;
 
 import java.util.Scanner;
 

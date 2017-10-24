@@ -2,16 +2,27 @@ package yi.letlangproj;
 
 import yi.letlangproj.LetScanner.Token;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
-	public static void main(String... arg) {
-		String input = "let x = 7\n" + "in let y = 2\n" + "in let y = let x = -(x, 1)\n" + "in -(x, y)\n" + "in -(-(x, 8), y)";
-		ArrayList<Token> sclist = LetScanner.lex(input);
+	public static void main(String... args) {
+		String filePathString = args.length > 0 ? args[0] : new Scanner(System.in).nextLine();
+		String fileContent;
+		try {
+			byte[] fileBytes = Files.readAllBytes(Paths.get(filePathString));
+			fileContent = new String(fileBytes);
+		} catch(IOException e) {
+			throw new RuntimeException(e);
+		}
+		ArrayList<Token> sclist = LetScanner.lex(fileContent);
 		for(Token i : sclist) {
 			System.out.println(i);
 		}
-		LetLangExp Lc = Parser.returnParser(input);
+		LetLangExp Lc = Parser.returnParser(fileContent);
 		int result = valueOf(Lc, null);
 		System.out.println(result);
 	}

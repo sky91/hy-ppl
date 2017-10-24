@@ -1,4 +1,4 @@
-package ppl;
+package yi.letlangproj;
 
 import java.util.ArrayList;
 
@@ -6,11 +6,6 @@ public class LetLangExp {
 	public static ArrayList<String> tokens = new ArrayList<String>();
 	ArrayList<String> tokens1 = new ArrayList<String>();
 	protected Variabletype Vari;
-
-	public static void main(String args[]) {
-		parser ps = new parser();
-		tokens = ps.returnParser();
-	}
 
 	public String getVar() {
 		return null;

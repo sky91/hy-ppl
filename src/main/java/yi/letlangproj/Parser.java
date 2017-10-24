@@ -1,14 +1,14 @@
-package ppl;
+package yi.letlangproj;
 
-import ppl.LetLangExp.ConstExp;
-import ppl.LetLangExp.DiffExp;
-import ppl.LetLangExp.LetExp;
-import ppl.LetLangExp.VarExp;
-import ppl.LetScanner.Token;
+import yi.letlangproj.LetLangExp.ConstExp;
+import yi.letlangproj.LetLangExp.DiffExp;
+import yi.letlangproj.LetLangExp.LetExp;
+import yi.letlangproj.LetLangExp.VarExp;
+import yi.letlangproj.LetScanner.Token;
 
 import java.util.ArrayList;
 
-public class parser_e {
+public class Parser {
 	private static final String Continue = null;
 	public static ArrayList<Token> tokens1 = new ArrayList<Token>();
 	public static ArrayList<String> tokens2 = new ArrayList<String>();
@@ -29,9 +29,9 @@ public class parser_e {
 			System.out.println(token);
 		}
 		// lp.Parse(tokens1);
-		parser_e p = new parser_e();
+		Parser p = new Parser();
 		// pop the first Token
-		Token = parser_e.tokens1.remove(0);
+		Token = Parser.tokens1.remove(0);
 		// Tokens =parser_e.tokens1.remove(0).toString();
 		// System.out.println("Inside Parse function " + Token);
 		expression();
@@ -40,9 +40,9 @@ public class parser_e {
 	public static LetLangExp returnParser(String input) {
 		tokens1 = LetScanner.lex(input);
 		// lp.Parse(tokens1);
-		parser_e p = new parser_e();
+		Parser p = new Parser();
 		// pop the first Token
-		Token = parser_e.tokens1.remove(0);
+		Token = Parser.tokens1.remove(0);
 		// System.out.println("Inside Parse function " + Token);
 		//
 		return expression();

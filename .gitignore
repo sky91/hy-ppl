@@ -1,0 +1,32 @@
+##
+## Created by guofei - guofei@wifi.com
+##
+
+# Gradle work
+.gradle
+build
+
+# Maven work
+target
+
+# IntelliJ IDEA work
+*.idea
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+classes
+
+# Android
+local.properties
+
+# Mac OS X
+.DS_Store
+
+# Except .gitignore
+!.gitignore
+
+# Eclipse work
+.classpath
+.project
+.settings
